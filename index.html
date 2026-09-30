@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Открываю Obsidian…</title>
+<script>
+  const file = new URLSearchParams(location.search).get("file") || "Playground Home";
+  const url = "obsidian://open?vault=Playground&file=" + encodeURIComponent(file);
+  location.href = url;
+  document.write('<p>Открываю <b>' + file.replace(/</g, "&lt;") + '</b>… <a href="' + url + '">Нажми, если не открылось</a></p>');
+</script>
